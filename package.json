@@ -1,0 +1,43 @@
+{
+  "name": "adventofcode2025",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Advent of code 2025 solutions",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "vitest",
+    "test:run": "vitest run",
+    "start": "node run.js",
+    "lint": "eslint src/ test/ *.js",
+    "lint:fix": "eslint src/ test/ *.js --fix",
+    "format": "prettier --write src/ test/ *.js",
+    "format:check": "prettier --check src/ test/ *.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidebrognoli/adventofcode2024.git"
+  },
+  "keywords": [
+    "adventofcode"
+  ],
+  "author": "Davide Brognoli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidebrognoli/adventofcode2024/issues"
+  },
+  "homepage": "https://github.com/davidebrognoli/adventofcode2024#readme",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "prettier": "^3.7.3",
+    "vitest": "^4.0.14"
+  }
+}
