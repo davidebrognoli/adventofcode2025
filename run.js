@@ -1,21 +1,27 @@
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Prendi il nome del giorno come parametro dalla riga di comando
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
 const day = process.argv[2];
 
-// Funzione per caricare ed eseguire il codice per un giorno specifico
-function runDay(day) {
+async function runDay(day) {
   const dayPath = path.resolve(__dirname, `src/day${day}/index.js`);
 
   if (fs.existsSync(dayPath)) {
-    require(dayPath); // Esegui il codice del giorno specifico
+    const module = await import(dayPath); // Esegui il codice del giorno specifico
+    if (typeof module.main === 'function') {
+      module.main();
+    } else {
+      console.log(`Day ${day} loaded successfully (no main function found)`);
+    }
   } else {
     console.error(`Day ${day} script not found.`);
   }
 }
 
-// Esegui il codice del giorno
 if (day) {
   runDay(day);
 } else {

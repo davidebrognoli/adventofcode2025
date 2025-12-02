@@ -106,4 +106,4 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   main();
 }
 
-export { solvePart1, solvePart2 };
+export { solvePart1, solvePart2, main };
