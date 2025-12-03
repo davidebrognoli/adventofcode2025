@@ -27,8 +27,8 @@ function extractMaxValue(line, length) {
 
 /**
  * Solves the first part of the problem.
- * @param {string} line - Comma-separated ranges
- * @returns {number} Sum of numbers with duplicate halves
+ * @param {string[]} lines - Array of instruction lines
+ * @returns {number} Sum of max values with length 2
  */
 function solvePart1(lines) {
   const maxValues = lines.map(line => {
@@ -39,8 +39,8 @@ function solvePart1(lines) {
 
 /**
  * Solves the second part of the problem.
- * @param {string} line - Comma-separated ranges
- * @returns {number} Sum of numbers with repeating patterns
+ * @param {string[]} lines - Array of instruction lines
+ * @returns {number} Sum of max values with length 12
  */
 function solvePart2(lines) {
   const maxValues = lines.map(line => {
