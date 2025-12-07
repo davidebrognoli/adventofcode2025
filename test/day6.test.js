@@ -35,7 +35,7 @@ test('Example case for Part 2', () => {
   expect(solvePart2(input)).toBe(3263827);
 });
 
-/*test('Real case for Part 2', () => {
+test('Real case for Part 2', () => {
   const input = parseLines(realInput);
-  expect(solvePart2(input)).toBe(0);
-});*/
+  expect(solvePart2(input)).toBe(11044319475191);
+});
